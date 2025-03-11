@@ -4,6 +4,10 @@ import DPRLogo from './components/DPRLogo';
 import Terminal from './components/Terminal';
 
 function App() {
+  const handleConsultationClick = () => {
+    window.open('https://calendly.com/dreadpir8rbrtz-dpr', '_blank');
+  };
+
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-[#00ff00]">
       {/* Navbar */}
@@ -15,7 +19,10 @@ function App() {
             </div>
             <span className="text-xl font-bold text-[#ff00ff]">dpr development</span>
           </div>
-          <button className="px-6 py-2 border border-[#00ff00] hover:bg-[#00ff00] hover:text-[#0a0a0a] transition-colors">
+          <button 
+            onClick={handleConsultationClick}
+            className="px-6 py-2 border border-[#00ff00] hover:bg-[#00ff00] hover:text-[#0a0a0a] transition-colors"
+          >
             Book a Free Consultation
           </button>
         </div>
