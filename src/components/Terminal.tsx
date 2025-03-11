@@ -118,7 +118,7 @@ const Terminal: React.FC = () => {
       </div>
 
       {/* Welcome Message */}
-      <div className="mb-4 text-[#00ff00]">
+      <div className="mb-4 text-[#ff00ff]">
         $ Welcome! Please answer the following questions about your project:
       </div>
 

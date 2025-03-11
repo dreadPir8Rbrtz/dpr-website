@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code2, Globe, Database, Server, CreditCard, MessageSquare, Mail } from 'lucide-react';
+import { Code2, Globe, Database, Server, CreditCard, MessageSquare, Mail, Search, Instagram } from 'lucide-react';
 import DPRLogo from './components/DPRLogo';
 import Terminal from './components/Terminal';
 
@@ -15,18 +15,9 @@ function App() {
             </div>
             <span className="text-xl font-bold text-[#ff00ff]">dpr development</span>
           </div>
-          <div className="flex items-center gap-4">
-            <a 
-              href="mailto:dreadPir8Rbrtz@dpr.dev"
-              className="text-[#00ff00] hover:text-[#ff00ff] transition-colors"
-              aria-label="Email"
-            >
-              <Mail className="w-6 h-6" />
-            </a>
-            <button className="px-6 py-2 border border-[#00ff00] hover:bg-[#00ff00] hover:text-[#0a0a0a] transition-colors">
-              Book a Free Consultation
-            </button>
-          </div>
+          <button className="px-6 py-2 border border-[#00ff00] hover:bg-[#00ff00] hover:text-[#0a0a0a] transition-colors">
+            Book a Free Consultation
+          </button>
         </div>
       </nav>
 
@@ -52,9 +43,25 @@ function App() {
                   <DPRLogo />
                 </div>
                 <h1 className="text-4xl font-bold mt-4 text-[#ff00ff]">dreadPir8Rbrtz</h1>
-                <p className="text-lg mt-2 max-w-2xl text-center text-[#f5f5dc]">
-                  software engineer who enjoys building things... send me an email or schedule a free consultation if you want me to build something for you
-                </p>
+                <div className="flex items-center gap-8 mt-4">
+                  <a 
+                    href="https://instagram.com/dreadpir8rbrtz" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-[#00ff00] hover:text-[#ff00ff] transition-colors"
+                  >
+                    <Instagram className="w-10 h-10" />
+                  </a>
+                  <p className="text-lg max-w-2xl text-center text-[#f5f5dc]">
+                    software engineer who enjoys building things... send me an email or schedule a free consultation if you want me to build something for you
+                  </p>
+                  <a 
+                    href="mailto:dreadPir8Rbrtz@dpr.dev"
+                    className="text-[#00ff00] hover:text-[#ff00ff] transition-colors"
+                  >
+                    <Mail className="w-10 h-10" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -155,6 +162,11 @@ function App() {
                 icon: <CreditCard className="w-8 h-8" />,
                 title: 'Payment Processing',
                 description: 'Secure payment gateway integration'
+              },
+              {
+                icon: <Search className="w-8 h-8" />,
+                title: 'Google Ads & SEO',
+                description: 'Digital marketing and search engine optimization'
               }
             ].map((service) => (
               <div key={service.title} className="terminal-border p-6">
@@ -176,12 +188,12 @@ function App() {
           <div className="grid md:grid-cols-2 gap-8">
             {[
               {
-                text: "Working with this developer transformed our business. The custom e-commerce solution perfectly fits our needs and has significantly increased our online sales.",
-                author: "Owner, Smoke N Go WA"
+                text: "It was a pleasure working with dread. He is an efficient and highly-skilled engineer who was able to clearly understand our project goals resulting in a perfect web solution for our use case. Quick and reliable communication, speedy execution...Highly recommend",
+                author: "Matt, owner @ Smoke & GO"
               },
               {
-                text: "The website created for our landscaping business has helped us reach more customers and showcase our work professionally. Couldn't be happier with the results.",
-                author: "Owner, DS Outdoor Living"
+                text: "Dread was great to work with. I was amazed with how quickly he was able to develop everything we needed to launch our company's website. From building out the code for the website to procuring & configuring our domain to designing & building our necessary databases... he does it all seamlessly.What I appreciated the most about dread was his communication. I could also count on quick responses & complete understanding of project requests.",
+                author: "CJ, owner @ D's Outdoor Living"
               }
             ].map((testimonial, index) => (
               <div key={index} className="terminal-border p-6">
