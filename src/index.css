@@ -29,7 +29,71 @@ body {
   box-shadow: 0 0 10px rgba(0, 255, 0, 0.1);
 }
 
-@keyframes fall {
-  from { transform: translateY(-100%); }
-  to { transform: translateY(1000%); }
+.matrix-bg {
+  position: relative;
+  overflow: hidden;
+  background-color: #000;
 }
+
+.matrix-bg::before {
+  content: "01";
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  font-size: 24px;
+  color: #ff00ff;
+  text-shadow: 0 0 5px #ff00ff;
+  animation: matrix-fall 2s linear infinite;
+}
+
+.matrix-bg::after {
+  content: "10";
+  position: absolute;
+  top: -50%;
+  left: 30%;
+  font-size: 24px;
+  color: #0f0;
+  text-shadow: 0 0 5px #0f0;
+  animation: matrix-fall 1.5s linear infinite;
+}
+
+@keyframes matrix-fall {
+  0% {
+    transform: translateY(-100%) translateX(-50%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(1000%) translateX(-50%);
+    opacity: 0;
+  }
+}
+
+/* Add multiple falling binary elements */
+.matrix-bg .binary {
+  position: absolute;
+  font-size: 24px;
+  animation: matrix-fall linear infinite;
+  top: -20px;
+}
+
+/* Green binary numbers */
+.matrix-bg .binary:nth-child(odd) {
+  color: #0f0;
+  text-shadow: 0 0 5px #0f0;
+}
+
+/* Magenta binary numbers */
+.matrix-bg .binary:nth-child(even) {
+  color: #ff00ff;
+  text-shadow: 0 0 5px #ff00ff;
+}
+
+.matrix-bg .binary:nth-child(1) { left: 10%; animation-duration: 3s; }
+.matrix-bg .binary:nth-child(2) { left: 20%; animation-duration: 2s; }
+.matrix-bg .binary:nth-child(3) { left: 30%; animation-duration: 2.5s; }
+.matrix-bg .binary:nth-child(4) { left: 40%; animation-duration: 1.8s; }
+.matrix-bg .binary:nth-child(5) { left: 50%; animation-duration: 3.2s; }
+.matrix-bg .binary:nth-child(6) { left: 60%; animation-duration: 2.7s; }
+.matrix-bg .binary:nth-child(7) { left: 70%; animation-duration: 2.3s; }
+.matrix-bg .binary:nth-child(8) { left: 80%; animation-duration: 3.5s; }
+.matrix-bg .binary:nth-child(9) { left: 90%; animation-duration: 2.1s; }

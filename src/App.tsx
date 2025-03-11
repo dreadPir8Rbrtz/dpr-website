@@ -9,7 +9,12 @@ function App() {
       {/* Navbar */}
       <nav className="fixed w-full top-0 z-50 bg-[#0a0a0a] border-b border-[#00ff00] p-4">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <span className="text-xl font-bold">&gt;_ Developer</span>
+          <div className="flex items-center gap-3">
+            <div className="w-8 h-8 rounded-full overflow-hidden border-2 border-[#00ff00]">
+              <DPRLogo />
+            </div>
+            <span className="text-xl font-bold text-[#ff00ff]">dpr development</span>
+          </div>
           <button className="px-6 py-2 border border-[#00ff00] hover:bg-[#00ff00] hover:text-[#0a0a0a] transition-colors">
             Book a Free Consultation
           </button>
@@ -18,7 +23,18 @@ function App() {
 
       {/* Header Section */}
       <div className="relative pt-16">
-        <div className="h-64 bg-[url('https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&q=80')] bg-cover bg-center"></div>
+        <div className="h-64 matrix-bg">
+          {/* Matrix falling binary code */}
+          <div className="binary">01</div>
+          <div className="binary">10</div>
+          <div className="binary">01</div>
+          <div className="binary">11</div>
+          <div className="binary">00</div>
+          <div className="binary">10</div>
+          <div className="binary">01</div>
+          <div className="binary">11</div>
+          <div className="binary">00</div>
+        </div>
         <div className="max-w-7xl mx-auto px-4">
           <div className="relative -mt-24">
             <div className="flex flex-col">
@@ -26,7 +42,7 @@ function App() {
                 <div className="w-48 h-48 rounded-full border-4 border-[#00ff00] overflow-hidden">
                   <DPRLogo />
                 </div>
-                <h1 className="text-4xl font-bold mt-4">DreadPir8Rbrtz</h1>
+                <h1 className="text-4xl font-bold mt-4 text-[#ff00ff]">dreadPir8Rbrtz</h1>
                 <p className="text-lg mt-2 max-w-2xl text-center text-[#f5f5dc]">
                   software engineer who enjoys building things... send me an email or schedule a free consultation if you want me to build something for you
                 </p>
@@ -40,13 +56,19 @@ function App() {
       <div className="max-w-7xl mx-auto px-4">
         {/* Terminal Section */}
         <section className="mt-32">
-          <h2 className="text-2xl font-bold mb-8">&gt;_ Send me a message</h2>
+          <h2 className="text-2xl font-bold mb-8">
+            <span className="text-[#00ff00]">=&gt;</span> 
+            <span className="text-[#ff00ff]">send me a message</span>
+          </h2>
           <Terminal />
         </section>
 
         {/* Past Projects Section */}
         <section className="mt-32">
-          <h2 className="text-2xl font-bold mb-8">&gt;_ Past Projects</h2>
+          <h2 className="text-2xl font-bold mb-8">
+            <span className="text-[#00ff00]">=&gt;</span> 
+            <span className="text-[#ff00ff]">past projects</span>
+          </h2>
           <div className="grid md:grid-cols-2 gap-8">
             {[
               {
@@ -80,7 +102,10 @@ function App() {
 
         {/* Services Section */}
         <section className="mt-24">
-          <h2 className="text-2xl font-bold mb-8">&gt;_ Services</h2>
+          <h2 className="text-2xl font-bold mb-8">
+            <span className="text-[#00ff00]">=&gt;</span> 
+            <span className="text-[#ff00ff]">services</span>
+          </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
@@ -120,7 +145,10 @@ function App() {
 
         {/* Testimonials Section */}
         <section className="mt-24 mb-24">
-          <h2 className="text-2xl font-bold mb-8">&gt;_ Testimonials</h2>
+          <h2 className="text-2xl font-bold mb-8">
+            <span className="text-[#00ff00]">=&gt;</span> 
+            <span className="text-[#ff00ff]">testimonials</span>
+          </h2>
           <div className="grid md:grid-cols-2 gap-8">
             {[
               {
