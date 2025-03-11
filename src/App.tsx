@@ -60,7 +60,7 @@ function App() {
                     <Instagram className="w-10 h-10" />
                   </a>
                   <p className="text-lg max-w-2xl text-center text-[#f5f5dc]">
-                    software engineer who enjoys building things... send me an email or schedule a free consultation if you want me to build something for you
+                    software engineer who enjoys building things... send me a message below or schedule a free consultation if you want me to build something for you
                   </p>
                   <a 
                     href="mailto:dreadPir8Rbrtz@dpr.dev"
